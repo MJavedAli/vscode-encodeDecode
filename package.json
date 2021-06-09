@@ -1,0 +1,88 @@
+{
+    "name": "encode-decode",
+    "displayName": "Encode - Decode Utils",
+    "description": "Extension to convert text from base64 and vice-versa. Also able to Encrypt AES CBC Mode",
+    "icon": "images/logo.png",
+    "version": "1.0.3",
+    "publisher": "JavedAlix",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MJavedAli/vscode-encodeDecode"
+    },
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.Base64",
+        "onCommand:extension.Base64D",
+        "onCommand:extension.AESEncrypt",
+        "onCommand:extension.AESDecrypt",
+        "onCommand:extension.OpenInNewTab"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.Base64",
+                "title": "Encode Text to Base64"
+            },
+            {
+                "command": "extension.Base64D",
+                "title": "Decode Base64 to Text"
+            },
+            {
+                "command": "extension.AESEncrypt",
+                "title": "Encode using AES Encryption"
+            },
+            {
+                "command": "extension.AESDecrypt",
+                "title": "Decode using AES Decryption"
+            },
+            {
+                "command": "extension.OpenInNewTab",
+                "title": "Open selection in new tab."
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.Base64"
+                },
+                {
+                    "command": "extension.Base64D"
+                },
+                {
+                    "command": "extension.AESEncrypt"
+                },
+                {
+                    "command": "extension.AESDecrypt"
+                },
+                {
+                    "command": "extension.OpenInNewTab"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint -c .eslintrc.js --ext .ts src",
+        "watch": "tsc -watch -p ./",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "crypto-js": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.13.5",
+        "@types/vscode": "^1.25.0",
+        "@typescript-eslint/eslint-plugin": "2.31.0",
+        "@typescript-eslint/parser": "2.31.0",
+        "eslint": "^7.0.0",
+        "typescript": "^3.8.3"
+    }
+}
