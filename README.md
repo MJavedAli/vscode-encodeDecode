@@ -1,15 +1,15 @@
 # Encode Decode 
 
-
 ## Features
 
 Allows to transform selected text:
-- from Base64 to plain text
-- to Base64 from plain text
-- to AES Encryption CBC mode
+ - Encode plain text to Base64
+ - Decode Base64 to plain text
+ - Encrypt plain text using AES CBC mode
+ - Decrypt AES CBC text to plain text
 
 It also allows to open selected text to new tabs transforming text back from
-Base64 and AES encrypt if needed during the process.
+Base64 and AES Format if needed during the process.
 
 ## Requirements
 
